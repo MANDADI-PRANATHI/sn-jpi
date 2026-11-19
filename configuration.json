@@ -1,0 +1,1914 @@
+{
+  "assumptions": {
+    "gamma": 0.99,
+    "lr": 0.0003,
+    "value_coef": 0.5,
+    "kl_coef": 0.01,
+    "entropy_coef": 0.01,
+    "grad_cap": 0.5,
+    "ppo_epochs": 10,
+    "ppo_clip": 0.2,
+    "ppo_minibatch": 64,
+    "trpo_target_kl": 0.01,
+    "sac_lr": 0.0003,
+    "sac_warmup": 100,
+    "sac_buffer": 100000,
+    "sac_batch_size": 256,
+    "sac_gradient_steps": 1,
+    "sac_train_freq": 8
+  },
+  "beta": 0.8,
+  "episode_cap": 200,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "table_mapping": {
+    "2": [
+      "initial",
+      [
+        "InvertedPendulum-v5",
+        "Hopper-v5"
+      ],
+      [
+        "ppo",
+        "trpo",
+        "raw6",
+        "sn1"
+      ]
+    ],
+    "3": [
+      "initial",
+      [
+        "InvertedPendulum-v5",
+        "Hopper-v5"
+      ],
+      [
+        "sn1",
+        "sn3",
+        "sn6"
+      ]
+    ],
+    "4": [
+      "initial",
+      [
+        "InvertedPendulum-v5",
+        "Hopper-v5",
+        "InvertedDoublePendulum-v5"
+      ],
+      [
+        "raw6",
+        "sn6"
+      ]
+    ],
+    "5": [
+      "dense",
+      [
+        "InvertedPendulum-v5",
+        "Hopper-v5"
+      ],
+      [
+        "ppo",
+        "trpo",
+        "raw6",
+        "sn6"
+      ]
+    ],
+    "6": [
+      "stress",
+      [
+        "InvertedPendulum-v5",
+        "Hopper-v5"
+      ],
+      [
+        "ppo",
+        "trpo",
+        "raw6",
+        "sn6",
+        "sac_keep",
+        "sac_reset"
+      ]
+    ],
+    "7": [
+      "control",
+      [
+        "cartpole/swingup",
+        "walker/walk",
+        "cheetah/run"
+      ],
+      [
+        "ppo",
+        "trpo",
+        "raw6",
+        "sn6",
+        "sac_keep",
+        "sac_reset"
+      ]
+    ]
+  },
+  "matrix": [
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn1",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn1",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn1",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn1",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn1",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn1",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn3",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn3",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn3",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn3",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn3",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn3",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "initial",
+      "task": "InvertedDoublePendulum-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 60,
+      "switch": 18,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "dense",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 5
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "ppo",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "trpo",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "raw6",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sn6",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_keep",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_keep",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_keep",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_keep",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_keep",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_reset",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_reset",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_reset",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_reset",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "InvertedPendulum-v5",
+      "method": "sac_reset",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "ppo",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "trpo",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "raw6",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sn6",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_keep",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_keep",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_keep",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_keep",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_keep",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_reset",
+      "seed": 0,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_reset",
+      "seed": 1,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_reset",
+      "seed": 2,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_reset",
+      "seed": 3,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "stress",
+      "task": "Hopper-v5",
+      "method": "sac_reset",
+      "seed": 4,
+      "updates": 40,
+      "switch": 12,
+      "budget": 1024,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_keep",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_keep",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_keep",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_reset",
+      "seed": 0,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_reset",
+      "seed": 1,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cartpole/swingup",
+      "method": "sac_reset",
+      "seed": 2,
+      "updates": 30,
+      "switch": 10,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_keep",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_keep",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_keep",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_reset",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_reset",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "walker/walk",
+      "method": "sac_reset",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "ppo",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "ppo",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "ppo",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "trpo",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "trpo",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "trpo",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "raw6",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "raw6",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "raw6",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sn6",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sn6",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sn6",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_keep",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_keep",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_keep",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_reset",
+      "seed": 0,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_reset",
+      "seed": 1,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    },
+    {
+      "protocol": "control",
+      "task": "cheetah/run",
+      "method": "sac_reset",
+      "seed": 2,
+      "updates": 25,
+      "switch": 8,
+      "budget": 512,
+      "eval_episodes": 3
+    }
+  ]
+}
