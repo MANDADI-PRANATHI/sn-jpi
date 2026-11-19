@@ -1,0 +1,3 @@
+method,objective,gradient_norm,paper_objective,paper_gradient_norm,error_small_beta,paper_error_small_beta
+Raw Basic JPI,2.984796347033568,0.15434993236158037,3.0115,0.1571,,
+SN-JPI,3.0000000000000004,1.4086492254668704e-16,3.0,5.8e-17,1.747054489558074e-06,9.7e-06
