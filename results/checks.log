@@ -1,0 +1,19 @@
+Reset and step passed InvertedPendulum-v5
+Reset and step passed Hopper-v5
+Reset and step passed InvertedDoublePendulum-v5
+/workspace/scratch/0772060cce01/.snvenv/lib/python3.12/site-packages/gymnasium/spaces/box.py:236: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/workspace/scratch/0772060cce01/.snvenv/lib/python3.12/site-packages/gymnasium/spaces/box.py:306: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reset and step passed cartpole/swingup
+Reset and step passed walker/walk
+Reset and step passed cheetah/run
+Trainer smoke passed sn1
+Trainer smoke passed sn3
+Trainer smoke passed sn6
+Trainer smoke passed raw6
+Trainer smoke passed ppo
+Trainer smoke passed trpo
+Trainer smoke passed sac_keep
+Trainer smoke passed sac_reset
+Deterministic rerun and checkpoint round trip passed
